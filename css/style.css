@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background: #7E1F86; */
+  background: #1F271B;
+}
+.clock {
+  width: 400px;
+  color: #F3FCF0;
+  /* background: #A14DA0; */
+  background: #6E2594;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+.clock .date {
+  font-size: 1.1rem; /* 1.1rem = 1.1 * 16 = 17.6px */
+  color: #F2BAC9;
+}
+.clock .time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.clock .time #hour,
+.clock .time #minute,
+.clock .time #sec {
+  margin-right: 0.5rem;
+}
+.clock .time #day_status {
+  margin-left: 0.8rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 650px) {
+  .clock {
+    transform: scale(1.7);
+  }
+}
+@media (min-width: 560px) and (max-width: 649px) {
+  .clock {
+    transform: scale(1.4);
+  }
+}
+@media (max-width: 559px) {
+  .clock {
+    transform: scale(0.95);
+  }
+  .clock .time {
+    font-size: 2.2rem;
+  }
+  .clock .date {
+    font-size: 0.9rem;
+  }
+}
